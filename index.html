@@ -22,9 +22,17 @@
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+      new Splide( '.splide' ).mount();
+    } );
+  </script>
+  
+
 
   <!-- =======================================================
   * Name: JJ Kickboxing Club - v1.0
@@ -330,11 +338,21 @@ logged_out_greeting="Përshëndetje! Na shkruani këtu apo telefono në: 044 49 
   
           <div class="row">
   
+     
    <div class="col-lg-4 col-md-6">
               <div class="box wow fadeInLeft">
                 <h3>01-KICK</h3>
 
-               <img width="250" height="250" src="assets/img/t1.png" onclick="this.src='assets/img/t1-white.png'" ondblclick="this.src='assets/img/t1.png'"><br>
+                <div class="splide">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide"><img src="assets/img/t1.png" width="250" height="250">Black</li>
+                      <li class="splide__slide"><img src="assets/img/t1-white.png" width="250" height="250">White</li>
+                    </ul>
+                  </div>
+                </div>
+
+
                <br>
                <i class="ion-android-checkmark-circle"></i> <B>Women and Men's</B>
                <br>
@@ -346,6 +364,7 @@ logged_out_greeting="Përshëndetje! Na shkruani këtu apo telefono në: 044 49 
                 <ul>
                 </ul>
                 <a href="#contact" class="get-started-btn">Porosit</a>
+
               </div>
             </div> 
   
@@ -541,6 +560,8 @@ logged_out_greeting="Përshëndetje! Na shkruani këtu apo telefono në: 044 49 
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/superfish/superfish.min.js"></script>
   <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
 
   <!-- <script src="//code.tidio.co/qmcje6g5m14y6z7octad5n2oxvaeidv8.js" async></script>  -->
 
@@ -548,6 +569,13 @@ logged_out_greeting="Përshëndetje! Na shkruani këtu apo telefono në: 044 49 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    new Splide( '#splide', {
+      type  : 'fade',
+      rewind: true,
+    } ).mount();
+    </script>
 
 </body>
 
